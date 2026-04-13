@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+}
+
+header {
+    background: black;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: orange;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-rows: 120px 1fr;
+    height: 80vh;
+}
+
+.left {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    padding: 20px;
+}
+
+.middle-top {
+    grid-column: 2;
+    grid-row: 1;
+    background: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background: black;
+    color: white;
+    padding: 10px 15px;
+    width: 120px;
+    border-left: 4px solid orange;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    background: orange;
+    color: black;
+    transform: translateX(10px);
+    box-shadow: 0 5px 15px rgba(255, 165, 0, 0.4);
+}
+
+.middle-top ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.middle-top li {
+    margin: 10px 0;
+}
+
+.middle-bottom {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.animation-box {
+    width: 80%;
+    height: 120px;
+    border: 2px dashed orange;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.7; }
+    50% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.7; }
+}
+
+.right {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right img {
+    max-width: 80%;
+}
+
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
