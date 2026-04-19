@@ -3,6 +3,9 @@ body {
     font-family: Arial, sans-serif;
     background-color: white;
     color: black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -31,24 +34,37 @@ nav a:hover {
 .layout {
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr;
-    grid-template-rows: 120px 1fr;
-    height: 80vh;
+    grid-template-rows:auto 1fr;
+    grid-template-areas: "left middle right" "left animation right";
+    gap:1.5rem;
+    padding: 2rem;;
 }
 
 .left {
-    grid-column: 1;
-    grid-row: 1 / span 2;
-    padding: 20px;
+    grid-area: left;
 }
 
 .middle-top {
-    grid-column: 2;
-    grid-row: 1;
-    background: white;
-    color: black;
+    grid-area: middle;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+}
+
+.middle-bottom {
+    grid-area: animation;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right {
+    grid-area: right;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 450px;
 }
 
 .card {
@@ -78,14 +94,6 @@ nav a:hover {
     margin: 10px 0;
 }
 
-.middle-bottom {
-    grid-column: 2;
-    grid-row: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .animation-box {
     width: 80%;
     height: 120px;
@@ -99,17 +107,9 @@ nav a:hover {
     100% { transform: scale(1); opacity: 0.7; }
 }
 
-.right {
-    grid-column: 3;
-    grid-row: 1 / span 2;
-    background: #111;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .right img {
-    max-width: 80%;
+    max-width: 90%;
+    max-height: auto;
 }
 
 footer {
@@ -117,4 +117,5 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
+    margin-top: auto;
 }
