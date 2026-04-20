@@ -109,7 +109,7 @@ nav a:hover {
 
 .right img {
     max-width: 90%;
-    max-height: 500px;
+    max-height: auto;
 }
 
 footer {
