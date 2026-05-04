@@ -109,7 +109,7 @@ nav a:hover {
 
 .right img {
     max-width: 90%;
-    max-height: auto;
+    height: auto;
 }
 
 footer {
@@ -119,3 +119,74 @@ footer {
     padding: 10px;
     margin-top: auto;
 }
+
+.simple-layout {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.side-menu {
+    border: 180px;
+    padding: 1px solid black;
+    width: 1rem;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-menu li {
+    margin-bottom: 0.6rem;
+}
+
+.content {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.image-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background-color: rgb(10, 9, 9);
+    width: 100%;
+}
+
+.image-box img {
+    width: auto;
+    max-height: 90%;
+}
+
+.compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+}
+
+.compare-table th, .compare-table td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+.compare-table th {
+    background-color: black;
+    color: white;
+}
+
+.content button {
+    padding: 0.8rem;
+    background-color: orange;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+}
+
+
